@@ -18,9 +18,9 @@ public class ClienteResource {
 	private ClienteService service;
 	
 	@RequestMapping(value="/{id}", method = RequestMethod.GET) //O end point receberá um id por parametro
-	public ResponseEntity<?> find(@PathVariable Integer id) { //anotação diz que o id é recebido via url
+	public ResponseEntity<Cliente> find(@PathVariable Integer id) { //anotação diz que o id é recebido via url
 
-		Cliente obj = service.buscar(id);
+		Cliente obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
 
 	}
