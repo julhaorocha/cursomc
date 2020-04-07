@@ -42,7 +42,11 @@ public class CategoriaResource {
 		obj = service.update(obj);
 		return ResponseEntity.noContent().build();
 	}
-	
+	@RequestMapping(value="/{id}", method = RequestMethod.DELETE) //O end point receberá um id por parametro
+	public ResponseEntity<Void> delete(@PathVariable Integer id) { //anotação diz que o id é recebido via url
+		service.delete(id);
+		return ResponseEntity.noContent().build();
+	}
 	
 	
 	
