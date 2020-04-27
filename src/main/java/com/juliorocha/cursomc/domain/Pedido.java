@@ -64,7 +64,7 @@ public class Pedido implements Serializable{
 		}
 		return soma;
 	}
-	public Integer getId() {
+	public Integer getId() { 
 		return id;
 	}
 
